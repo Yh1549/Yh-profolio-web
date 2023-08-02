@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+import { themeChange } from "theme-change";
+import { onMounted } from "vue";
+
+onMounted(() => {
+  themeChange(false);
+});
+</script>
 <template>
   <header class="navbar bg-base-100">
     <div class="navbar-start">
@@ -34,7 +41,7 @@
           <li><a>Item 3</a></li>
         </ul>
       </div>
-      <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+      <a href="#" class="btn btn-ghost normal-case">Zheng Yi Hong</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
@@ -52,7 +59,14 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn">Button</a>
+      <span
+        data-toggle-theme="luxury"
+        data-act-class="pl-4"
+        class="border rounded-full border-primary flex items-center cursor-pointer w-10 transition-all duration-300 ease-in-out pl-0"
+      >
+        <span class="rounded-full w-3 h-3 m-1 bg-primary"> </span>
+      </span>
     </div>
   </header>
 </template>
+<style scoped></style>

@@ -2,7 +2,9 @@
 import Header from "../components/Header.vue";
 </script>
 <template>
-  <Header />
-  <router-view></router-view>
-  <footer></footer>
+  <div class="w-full md:w-1/2 mx-auto">
+    <Header />
+    <router-view></router-view>
+    <footer></footer>
+  </div>
 </template>
