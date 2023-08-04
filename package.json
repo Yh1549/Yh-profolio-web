@@ -11,10 +11,12 @@
   "dependencies": {
     "pinia": "^2.1.6",
     "theme-change": "^2.5.0",
+    "three": "^0.155.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
     "daisyui": "^3.5.0",
