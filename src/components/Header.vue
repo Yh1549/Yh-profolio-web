@@ -15,7 +15,7 @@ onMounted(() => {
   <header
     class="navbar bg-base-100 w-full sticky top-0 z-10 backdrop-blur-md bg-transparent rounded-md"
   >
-    <div class="w-full md:w-3/4 mx-auto">
+    <div class="w-full max-w-3xl mx-auto">
       <div class="navbar-start">
         <router-link class="flex gap-2" :to="{ name: 'Home' }">
           <svg
