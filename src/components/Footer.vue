@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="footer footer-center my-10 p-10 bg-base-200 text-base-content rounded"
+    class="footer footer-center mt-10 p-10 bg-base-200 text-base-content rounded"
   >
     <div>
       <p>Contact Me !!</p>
