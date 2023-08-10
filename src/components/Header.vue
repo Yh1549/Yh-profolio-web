@@ -57,7 +57,7 @@ onMounted(() => {
         <label tabindex="0" class="swap swap-rotate">
           <!-- this hidden checkbox controls the state -->
           <input
-            data-toggle-theme="luxury"
+            data-toggle-theme="synthwave"
             data-act-class="c"
             type="checkbox"
             :checked="themeToggle"

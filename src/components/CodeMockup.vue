@@ -4,7 +4,10 @@ const prop = defineProps(["code"]);
 <template>
   <div class="mockup-code w-full">
     <slot name="content">
-      <pre data-prefix="$" class="text-success"><code>{{prop.code}}</code></pre>
+      <pre
+        data-prefix="$"
+        class="text-secondary"
+      ><code>{{prop.code}}</code></pre>
     </slot>
   </div>
 </template>
