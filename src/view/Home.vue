@@ -34,10 +34,10 @@ const works = [
   {
     title: "title1",
     content: "ewq",
-    imgSrc: "/public/cat-icon.jpg",
+    imgSrc: "src/assets/cat-icon.jpg",
   },
-  { title: "title2", content: "123", imgSrc: "/public/vite.svg" },
-  { title: "title2", content: "123", imgSrc: "" },
+  { title: "title2", content: "123", imgSrc: "/src/assets/cat-icon2.jpg" },
+  { title: "title2", content: "123", imgSrc: "src/assets/cat-icon.jpg" },
 ];
 const code = ref("Hello world!");
 </script>
