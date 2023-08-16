@@ -43,7 +43,7 @@ const works = [
     content: "123",
     imgSrc: path2,
   },
-  { title: "title2", content: "123", imgSrc: "/src/assets/cat-icon.jpg" },
+  { title: "title2", content: "123", imgSrc: path1 },
 ];
 const code = ref("Hello world!");
 </script>
