@@ -1,8 +1,11 @@
 <script setup>
 import { ref } from "vue";
+import path1 from "../assets/cat-icon.jpg";
+import path2 from "../assets/cat-icon2.jpg";
 import BioList from "../components/BioList.vue";
 import Card from "../components/Card.vue";
 import CodeMockup from "../components/CodeMockup.vue";
+// const path1 = require("../assets/cat-icon.jpg");
 const BioContent = [
   {
     year: "1994",
@@ -33,9 +36,13 @@ const works = [
   {
     title: "title1",
     content: "ewq",
-    imgSrc: "src/assets/cat-icon.jpg",
+    imgSrc: path1,
   },
-  { title: "title2", content: "123", imgSrc: "../assets/cat-icon2.jpg" },
+  {
+    title: "title2",
+    content: "123",
+    imgSrc: path2,
+  },
   { title: "title2", content: "123", imgSrc: "/src/assets/cat-icon.jpg" },
 ];
 const code = ref("Hello world!");
