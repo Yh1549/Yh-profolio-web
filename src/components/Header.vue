@@ -1,9 +1,21 @@
 <script setup>
 import { themeChange } from "theme-change";
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
+import { useI18n } from "vue-i18n";
 const themeToggle = ref(false);
 const menuToggle = ref(false);
-
+const languageBtn = ref(null);
+const { locale } = useI18n();
+const changeLang = () => {
+  if (locale.value != "en") {
+    locale.value = "en";
+  } else {
+    locale.value = "ch";
+  }
+};
+const getLangValue = computed(() => {
+  return locale.value;
+});
 onMounted(() => {
   themeChange(false);
   if (localStorage.getItem("theme")) {
@@ -34,7 +46,7 @@ onMounted(() => {
       <nav class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
           <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
-          <li><router-link :to="{ name: 'Work' }">Work</router-link></li>
+          <li><router-link :to="{ name: 'Works' }">Work</router-link></li>
           <li><a href="https://yh1549-blog.netlify.app/">Blog</a></li>
           <li>
             <a href="https://github.com/Yh1549/Yh-profolio-web"
@@ -54,6 +66,9 @@ onMounted(() => {
       </nav>
 
       <div class="navbar-end flex gap-2">
+        <button ref="languageBtn" class="btn" @click="changeLang">
+          {{ getLangValue }}
+        </button>
         <label tabindex="0" class="swap swap-rotate">
           <!-- this hidden checkbox controls the state -->
           <input
@@ -120,7 +135,7 @@ onMounted(() => {
             class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
-            <li><router-link :to="{ name: 'Work' }">Work</router-link></li>
+            <li><router-link :to="{ name: 'Works' }">Work</router-link></li>
             <li>
               <a href="https://github.com/Yh1549/Yh-profolio-web">Source</a>
             </li>

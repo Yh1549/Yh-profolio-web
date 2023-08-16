@@ -3,7 +3,6 @@ import { ref } from "vue";
 import BioList from "../components/BioList.vue";
 import Card from "../components/Card.vue";
 import CodeMockup from "../components/CodeMockup.vue";
-import ThreeD from "../components/ThreeD.vue";
 const BioContent = [
   {
     year: "1994",
@@ -42,15 +41,14 @@ const works = [
 const code = ref("Hello world!");
 </script>
 <template>
-  <ThreeD></ThreeD>
-  <div class="flex flex-col relative -top-20">
+  <div class="flex flex-col">
     <h1 class="text-4xl text-center">Work In Progress....</h1>
     <div class="alert alert-info my-4">
       <span>Hello!, Welcome!</span>
     </div>
     <div class="my-2 flex justify-between">
       <div>
-        <h1 class="font-bold text-2xl">Zheng Yi Hong</h1>
+        <h1 class="font-bold text-2xl">Zheng Yi Hong / 鄭翊宏</h1>
         <p class="text-sm opacity-40">Back-End Developer</p>
       </div>
       <div class="avatar">
@@ -63,7 +61,7 @@ const code = ref("Hello world!");
     </div>
 
     <section class="w-full">
-      <h2 class="font-bold text-2xl my-2">About Me</h2>
+      <h2 class="font-bold text-2xl my-2">{{ $t("message.title.aboutme") }}</h2>
       <p class="text-sm indent-4">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni autem
         culpa alias error similique, labore odio eos a atque exercitationem
@@ -81,7 +79,7 @@ const code = ref("Hello world!");
         quod laboriosam sed officia.
       </p>
       <div class="text-center my-2">
-        <router-link class="btn btn-primary" :to="{ name: 'Work' }"
+        <router-link class="btn btn-primary" :to="{ name: 'Works' }"
           >Checkout My Work
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +95,7 @@ const code = ref("Hello world!");
     <div class="divider"></div>
 
     <section class="w-full">
-      <h2 class="font-bold text-2xl my-2">Bio</h2>
+      <h2 class="font-bold text-2xl my-2">{{ $t("message.title.bio") }}</h2>
       <BioList v-for="item of BioContent" :key="item">
         <template #year>{{ item.year }}</template>
         <template #content> {{ item.content }}</template>

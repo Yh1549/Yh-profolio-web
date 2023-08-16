@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.12.2",
     "pinia": "^2.1.6",
     "theme-change": "^2.5.0",
     "three": "^0.155.0",
