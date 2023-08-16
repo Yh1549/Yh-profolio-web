@@ -66,7 +66,6 @@ const code = ref("Hello world!");
         </div>
       </div>
     </div>
-
     <section class="w-full">
       <h2 class="font-bold text-2xl my-2">{{ $t("message.title.aboutme") }}</h2>
       <p class="text-sm indent-4">
