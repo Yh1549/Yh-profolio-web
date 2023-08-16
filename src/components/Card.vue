@@ -1,8 +1,12 @@
+<script setup>
+const props = defineProps(["imgSrc"]);
+</script>
 <template>
   <div class="p-4 w-full md:w-1/2">
     <div class="card bg-base-300 shadow-xl box-content">
       <figure class="w-full h-48">
-        <slot name="WorkImg"> </slot>
+        <!-- <slot name="WorkImg"> </slot> -->
+        <img :src="props.imgSrc" />
       </figure>
       <div class="card-body gap-0">
         <h2 class="card-title">

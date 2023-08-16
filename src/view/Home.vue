@@ -35,8 +35,8 @@ const works = [
     content: "ewq",
     imgSrc: "src/assets/cat-icon.jpg",
   },
-  { title: "title2", content: "123", imgSrc: "/src/assets/cat-icon2.jpg" },
-  { title: "title2", content: "123", imgSrc: "src/assets/cat-icon.jpg" },
+  { title: "title2", content: "123", imgSrc: "../assets/cat-icon2.jpg" },
+  { title: "title2", content: "123", imgSrc: "/src/assets/cat-icon.jpg" },
 ];
 const code = ref("Hello world!");
 </script>
@@ -141,11 +141,11 @@ const code = ref("Hello world!");
     <section>
       <h2 class="font-bold text-2xl my-2">Recent Work</h2>
       <div class="flex flex-wrap">
-        <Card v-for="item of works" :key="item.title">
+        <Card v-for="item of works" :key="item.title" :imgSrc="item.imgSrc">
           <template #title>{{ item.title }}</template>
           <template #info>{{ item.content }}</template>
           <template #content>{{ item.content }}</template>
-          <template #WorkImg> <img :src="item.imgSrc" /> </template>
+          <!-- <template #WorkImg> <img :src="item.imgSrc" /> </template> -->
         </Card>
       </div>
     </section>
