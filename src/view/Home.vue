@@ -40,7 +40,7 @@ const works = [
   },
   {
     title: "title2",
-    content: "123",
+    content: "",
     imgSrc: path2,
   },
   { title: "title2", content: "123", imgSrc: path1 },
@@ -151,7 +151,6 @@ const code = ref("Hello world!");
           <template #title>{{ item.title }}</template>
           <template #info>{{ item.content }}</template>
           <template #content>{{ item.content }}</template>
-          <!-- <template #WorkImg> <img :src="item.imgSrc" /> </template> -->
         </Card>
       </div>
     </section>
