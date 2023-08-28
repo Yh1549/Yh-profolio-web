@@ -69,20 +69,7 @@ const code = ref("Hello world!");
     <section class="w-full">
       <h2 class="font-bold text-2xl my-2">{{ $t("message.title.aboutme") }}</h2>
       <p class="text-sm indent-4">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni autem
-        culpa alias error similique, labore odio eos a atque exercitationem
-        architecto, consectetur molestias aliquam dolor possimus reprehenderit.
-        Officia, cupiditate perferendis? Voluptas necessitatibus alias eaque
-        delectus saepe tempore sit eius, iusto labore maxime repellat architecto
-        molestiae corrupti ab nisi similique autem dolor excepturi fuga odio
-        quisquam! Neque necessitatibus numquam vero aperiam! Numquam impedit ea
-        harum nihil. Maiores optio vitae corrupti maxime consequatur pariatur
-        nobis similique, repellendus molestias veritatis suscipit, libero,
-        nostrum corporis consectetur quasi sapiente aliquid asperiores sit
-        dolorem enim. Eveniet. Odit at dolores facere, officia quia aspernatur
-        commodi aliquid placeat amet blanditiis ad ut eum dolorem excepturi,
-        ipsum molestiae fugit mollitia, temporibus aperiam eius? Cumque modi
-        quod laboriosam sed officia.
+        {{ $t("message.about.content") }}
       </p>
       <div class="text-center my-2">
         <router-link class="btn btn-primary" :to="{ name: 'Works' }"
