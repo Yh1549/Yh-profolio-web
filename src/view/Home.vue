@@ -20,17 +20,28 @@ const BioContent = [
     content: "Union Bank Of Taiwan, back-end Developer",
   },
 ];
-const skillList = [
-  { name: "Java", code: "System.out.println('Hello World!')" },
-  { name: "JavaFX", code: "System.out.println('Hello World!')" },
-  { name: "Spring boot 3", code: "javac HelloWorld.java" },
-  { name: "DB2", code: "javac HelloWorl.java" },
-  { name: "PostgreSQL", code: "javac HelloWorl.java" },
+const skillListFront = [
   { name: "Javascript", code: "alert('Hello World!')" },
-  { name: "Vuejs", code: "alert('Hello World!')" },
-  { name: "astro", code: "alert('Hello World!')" },
-  { name: "Nginx", code: "alert('Hello World!')" },
-  { name: "Git", code: "alert('Hello World!')" },
+  { name: "Html/Css", code: "<h1>Hello World!</h1>" },
+  { name: "Tailwind CSS", code: "npx tailwindcss init -p" },
+  { name: "Vuejs", code: "app.use()" },
+  { name: "vue-router", code: "app.use(CreateRouter())" },
+  { name: "pinia", code: "app.use(createPinia())" },
+  { name: "Axios", code: "axios.get('https://')" },
+  { name: "astro", code: "npm create astro@latest" },
+];
+const skillListBack = [
+  { name: "Java", code: "System.out.println('Hello World!')" },
+  { name: "JavaFX", code: "new Button('Hello World')" },
+  { name: "Spring boot 3", code: "@RestController" },
+  { name: "Redis", code: "PING 'PONG'" },
+  { name: "PostgreSQL", code: "SELECT * FROM table_name" },
+];
+const skillList = [
+  { name: "Nginx", code: "nginx -s reload" },
+  { name: "Git", code: "git commit -m 'hello'" },
+  { name: "AlmaLinux", code: "systemctl start service" },
+  { name: "Jenkins", code: "apt-get install jenkins" },
 ];
 const works = [
   {
@@ -96,8 +107,26 @@ const code = ref("Hello world!");
     <div class="divider"></div>
     <section>
       <h2 class="font-bold text-2xl my-2">Skills</h2>
-      <div class="my-4">
-        <div class="flex gap-2 justify-center flex-wrap my-2">
+      <div class="my-4 flex flex-wrap">
+        <div class="w-full md:w-1/3 flex gap-2 justify-center flex-wrap my-2">
+          <span
+            v-for="item of skillListFront"
+            :key="item"
+            class="badge badge-primary badge-lg hover:badge-accent"
+            @mouseenter="code = item.code"
+            >{{ item.name }}</span
+          >
+        </div>
+        <div class="w-full md:w-1/3 flex gap-2 justify-center flex-wrap my-2">
+          <span
+            v-for="item of skillListBack"
+            :key="item"
+            class="badge badge-primary badge-lg hover:badge-accent"
+            @mouseenter="code = item.code"
+            >{{ item.name }}</span
+          >
+        </div>
+        <div class="w-full md:w-1/3 flex gap-2 justify-center flex-wrap my-2">
           <span
             v-for="item of skillList"
             :key="item"
@@ -106,8 +135,8 @@ const code = ref("Hello world!");
             >{{ item.name }}</span
           >
         </div>
-        <CodeMockup class="block" :code="code" />
       </div>
+      <CodeMockup class="block" :code="code" />
     </section>
     <div class="divider"></div>
     <section class="w-full">
