@@ -19,6 +19,10 @@ const BioContent = [
     year: "2023",
     content: "Union Bank Of Taiwan, back-end Developer",
   },
+  {
+    year: "2023 ~ now",
+    content: "Yuanta bank, full-stack Developer",
+  },
 ];
 const skillListFront = [
   { name: "Javascript", code: "alert('Hello World!')" },
@@ -78,7 +82,7 @@ const code = ref("Hello world!");
     </div>
     <section class="w-full">
       <h2 class="font-bold text-2xl my-2">{{ $t("message.title.aboutme") }}</h2>
-      <p class="text-sm indent-4">
+      <p class="my-8 text-sm indent-4">
         {{ $t("message.about.content") }}
       </p>
       <div class="text-center my-2">
