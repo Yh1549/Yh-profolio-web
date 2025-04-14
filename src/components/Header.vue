@@ -47,7 +47,7 @@ onMounted(() => {
         <ul class="menu menu-horizontal px-1">
           <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
           <li><router-link :to="{ name: 'Works' }">Work</router-link></li>
-          <li><a href="https://yh1549-blog.netlify.app/">Blog</a></li>
+          <li><a href="https://yh1549-blog.netlify.app/">Note</a></li>
           <li>
             <a href="https://github.com/Yh1549/Yh-profolio-web"
               ><svg

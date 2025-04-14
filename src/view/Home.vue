@@ -1,7 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import path1 from "../assets/cat-icon.jpg";
-import path2 from "../assets/cat-icon2.jpg";
 import BioList from "../components/BioList.vue";
 import Card from "../components/Card.vue";
 import CodeMockup from "../components/CodeMockup.vue";
@@ -21,7 +19,7 @@ const BioContent = [
   },
   {
     year: "2023 ~ now",
-    content: "Yuanta bank, full-stack Developer",
+    content: "Yuanta bank, Java Developer",
   },
 ];
 const skillListFront = [
@@ -36,10 +34,10 @@ const skillListFront = [
 ];
 const skillListBack = [
   { name: "Java", code: "System.out.println('Hello World!')" },
-  { name: "JavaFX", code: "new Button('Hello World')" },
   { name: "Spring boot 3", code: "@RestController" },
   { name: "Redis", code: "PING 'PONG'" },
   { name: "PostgreSQL", code: "SELECT * FROM table_name" },
+  { name: "Azure devops", code: "ADO" },
 ];
 const skillList = [
   { name: "Nginx", code: "nginx -s reload" },
@@ -47,23 +45,11 @@ const skillList = [
   { name: "AlmaLinux", code: "systemctl start service" },
   { name: "Jenkins", code: "apt-get install jenkins" },
 ];
-const works = [
-  {
-    title: "title1",
-    content: "ewq",
-    imgSrc: path1,
-  },
-  {
-    title: "title2",
-    content: "",
-    imgSrc: path2,
-  },
-];
+const works = [];
 const code = ref("Hello world!");
 </script>
 <template>
   <div class="flex flex-col">
-    <h1 class="text-4xl text-center">Work In Progress....</h1>
     <div class="alert alert-info my-4">
       <span>Hello!, Welcome!</span>
     </div>
@@ -81,10 +67,13 @@ const code = ref("Hello world!");
       </div>
     </div>
     <section class="w-full">
-      <h2 class="font-bold text-2xl my-2">{{ $t("message.title.aboutme") }}</h2>
-      <p class="my-8 text-sm indent-4">
-        {{ $t("message.about.content") }}
-      </p>
+      <div class="flex justify-between items-center opacity-80">
+        <h2 class="font-bold text-2xl my-2">
+          {{ $t("message.title.aboutme") }}
+        </h2>
+        <p>cpeter618@gmail.com</p>
+      </div>
+      <p class="my-8 text-sm" v-html="$t('message.about.content')"></p>
       <div class="text-center my-2">
         <router-link class="btn btn-primary" :to="{ name: 'Works' }"
           >Checkout My Work

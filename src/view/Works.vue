@@ -4,6 +4,7 @@ import Card from "../components/Card.vue";
 import WorkSection from "../components/WorkSection.vue";
 </script>
 <template>
+  <h1 class="text-4xl text-center">Work In Progress....</h1>
   <WorkSection>
     <template #title> ffffff </template>
     <template #content>vfefdsgfdsgs</template>
